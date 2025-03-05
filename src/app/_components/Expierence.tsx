@@ -1,29 +1,24 @@
-import * as THREE from 'three'
-import { useFrame } from "@react-three/fiber"
-import { useRef } from "react"
+import { TrackballControls } from "@react-three/drei"
 
 
 export default function Experience() {
 
-    const cubeRef = useRef<THREE.Mesh>(null!)
-
-    useFrame((state, delta) => {
-        
-        const angle = state.clock.elapsedTime * 0.2
-
-        state.camera.position.x = Math.sin(angle) * 8
-        state.camera.position.z = Math.cos(angle) * 8
-        state.camera.lookAt(0,0,0)
-        
-        cubeRef.current.rotation.x += delta * 0.2
-
-    })
-
     return (
-        <mesh ref={cubeRef}>
-            <boxGeometry args={[1, 1, 1]} />
-            <meshBasicMaterial color="blue" wireframe/>
-        </mesh>
+        <>
+            <TrackballControls
+                target={[0, 0, 0]}
+                minDistance={1}
+                maxDistance={3}
+                noPan
+                rotateSpeed={2.5}
+            />
+            <directionalLight position={[1, 1, 0]} />
+            <ambientLight intensity={0.7} />
+            <mesh>
+                <boxGeometry args={[1, 1, 1]} />
+                <meshStandardMaterial color="blue" />
+            </mesh>
+        </>
     )
 
 }
