@@ -8,7 +8,15 @@ export default function Experience() {
     const cubeRef = useRef<THREE.Mesh>(null!)
 
     useFrame((state, delta) => {
-        cubeRef.current.rotation.x += delta * 0.8
+        
+        const angle = state.clock.elapsedTime * 0.2
+
+        state.camera.position.x = Math.sin(angle) * 8
+        state.camera.position.z = Math.cos(angle) * 8
+        state.camera.lookAt(0,0,0)
+        
+        cubeRef.current.rotation.x += delta * 0.2
+
     })
 
     return (
