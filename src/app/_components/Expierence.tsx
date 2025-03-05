@@ -1,16 +1,13 @@
-import { TrackballControls } from "@react-three/drei"
+import { OrbitControls } from "@react-three/drei"
 
 
 export default function Experience() {
 
     return (
         <>
-            <TrackballControls
-                target={[0, 0, 0]}
-                minDistance={1}
-                maxDistance={3}
-                noPan
-                rotateSpeed={2.5}
+            <OrbitControls
+                enablePan={false}
+                rotateSpeed={0.8}
             />
             <directionalLight position={[1, 1, 0]} />
             <ambientLight intensity={0.7} />
