@@ -8,7 +8,7 @@ import * as THREE from 'three'
 export default function Home() {
   return (
     <Canvas
-      orthographic
+      // orthographic
       gl={{
         antialias: true,
         toneMapping: THREE.ACESFilmicToneMapping,
@@ -17,7 +17,7 @@ export default function Home() {
       camera={{
         fov: 35,
         position: [1, 1, 1],
-        zoom: 200
+        // zoom: 220
       }}>
       <Experience />
     </Canvas>
