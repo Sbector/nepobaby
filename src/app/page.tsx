@@ -9,11 +9,6 @@ export default function Home() {
   return (
     <Canvas
       // orthographic
-      gl={{
-        antialias: true,
-        toneMapping: THREE.ACESFilmicToneMapping,
-        outputColorSpace: THREE.SRGBColorSpace
-      }}
       camera={{
         fov: 35,
         position: [1, 1, 1],
