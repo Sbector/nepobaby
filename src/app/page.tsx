@@ -2,8 +2,6 @@
 
 import { Canvas } from "@react-three/fiber"
 import Experience from "./_components/Expierence"
-import * as THREE from 'three'
-
 
 export default function Home() {
   return (
