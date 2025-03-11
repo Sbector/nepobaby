@@ -9,7 +9,7 @@ export default function Home() {
       // orthographic
       camera={{
         fov: 25,
-        position: [0, 0, 8],
+        position: [0, 4, 8],
         // zoom: 220
       }}>
       <Experience />
