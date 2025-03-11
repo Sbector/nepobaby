@@ -8,8 +8,8 @@ export default function Home() {
     <Canvas
       // orthographic
       camera={{
-        fov: 35,
-        position: [1, 1, 1],
+        fov: 25,
+        position: [0, 0, 8],
         // zoom: 220
       }}>
       <Experience />
