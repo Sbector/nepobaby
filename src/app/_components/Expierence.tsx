@@ -18,7 +18,7 @@ export default function Experience() {
             <OrbitControls
                 enablePan={false}
                 rotateSpeed={0.8}
-                minDistance={3.5}
+                minDistance={3}
                 maxDistance={8}
                 target={[0, -0.1, 0]}
             />
