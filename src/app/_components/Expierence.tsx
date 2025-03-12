@@ -1,16 +1,26 @@
-import { OrbitControls, Splat } from "@react-three/drei"
+import { Environment, OrbitControls } from "@react-three/drei"
+import GSplat from "./GSplat"
+import { Suspense } from "react"
+import Placeholder from "./Placeholder"
 
 
 export default function Experience() {
 
     return (
         <>
+            <Environment
+                background
+                preset="forest"
+                blur={1}
+                backgroundIntensity={0.1}
+            />
+
             <OrbitControls
                 enablePan={false}
                 rotateSpeed={0.8}
                 minDistance={3.5}
                 maxDistance={8}
-                target={[0,-0.1,0]}
+                target={[0, -0.1, 0]}
             />
             {/* <directionalLight position={[1, 1, 0]} />
             <directionalLight position={[1, 0, 0]} intensity={15} color={'#ff0000'} />
@@ -19,15 +29,9 @@ export default function Experience() {
                 <boxGeometry args={[1, 1, 1]} />
                 <meshStandardMaterial color="blue" />
             </mesh> */}
-            <Splat
-                src="./Masked.splat"
-                position={[0, -0.3, 0]}
-                scale={2}
-                chunkSize={1000}
-                alphaTest={0.04}
-            />
-
-
+            <Suspense fallback={<Placeholder/>}>
+                <GSplat />
+            </Suspense>
         </>
     )
 
