@@ -7,7 +7,7 @@ export default function GSplat() {
                         position={[0, -0.3, 0]}
                         scale={2}
                         chunkSize={1000}
-                        alphaTest={0.04}
+                
                     />
     )
 }
