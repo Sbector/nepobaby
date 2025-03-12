@@ -8,8 +8,9 @@ export default function Experience() {
             <OrbitControls
                 enablePan={false}
                 rotateSpeed={0.8}
-                minDistance={4}
+                minDistance={3.5}
                 maxDistance={8}
+                target={[0,-0.1,0]}
             />
             {/* <directionalLight position={[1, 1, 0]} />
             <directionalLight position={[1, 0, 0]} intensity={15} color={'#ff0000'} />
@@ -19,10 +20,11 @@ export default function Experience() {
                 <meshStandardMaterial color="blue" />
             </mesh> */}
             <Splat
-                src="./Guadalajarana(60Ksteps).splat"
+                src="./Masked.splat"
                 position={[0, -0.3, 0]}
-                scale={0.5}
-                chunkSize={1000} // Cargar en fragmentos más pequeños
+                scale={2}
+                chunkSize={1000}
+                alphaTest={0.04}
             />
 
 
